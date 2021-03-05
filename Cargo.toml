@@ -4,6 +4,19 @@ version = "0.1.0"
 authors = ["kaiserkarel <k.l.kubat@gmail.com>"]
 edition = "2018"
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "cli"
+path = "cli/main.rs"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+chrono = "0.4.11"
+rustpython-vm = {git = "https://github.com/RustPython/RustPython", package = "rustpython-vm"}
+compile = {git = "https://github.com/RustPython/RustPython", package = "rustpython-compiler"}
+pyderive = {git = "https://github.com/RustPython/RustPython", package = "rustpython-derive"}
+thiserror = "1.0.18"
+url = "2.1.1"
+anyhow = "1.0.31"
